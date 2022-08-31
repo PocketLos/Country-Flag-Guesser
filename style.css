@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Montserrat:wght@500&family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Anek Telugu', sans-serif;
+  background-color: #f07167;
+}
+
+.container {
+  width: 80vmin;
+  padding: 40px 60px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+.container h1 {
+  font-size: 25px;
+  color: #f07167;
+}
+
+.img-container {
+  width: 250px;
+  height: 150px;
+}
+
+.container img {
+  width: 200px;
+  height: 100px;
+}
+
+.container h3 {
+  font-size: 12px;
+}
+
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-box input {
+  font-family: 'Anek Telugu', sans-serif;
+  padding: 5px;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #f07167;
+  font-size: 12px;
+}
+
+.search-box button {
+  font-family: 'Anek Telugu', sans-serif;
+  padding: 10px 0;
+  width: 25%;
+  border-radius: 5px;
+  background-color: #f07167;
+  color: #ffffff;
+  border-color: transparent;
+  outline: none;
+}
+
+.search-box button:hover {
+  outline: none;
+  border-color: #f07167;
+  background: #ffffff;
+  color: #f07167;
+}
+
+.life-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.fa-heart {
+  color: #f07167;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  /* visibility: hidden; */
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+  width: 70vmin;
+  background-color: #ffffff;
+  padding: 40px 20px;
+  transition: all 0.3s ease-in-out;
+  color: #f07167;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+}
+
+.modal-container h3 {
+  font-size: 12px;
+}
+
+.modal-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 30px;
+}
+
+.modal-text h1 {
+  font-size: 30px;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 10px;
+}
+
+.score-container h1 {
+  font-size: 30px;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  min-width: 40px;
+  min-height: 40px;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-right: 5px solid #f07167;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+
+/* @keyframes scale {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+} */

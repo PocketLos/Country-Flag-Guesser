@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Country Flag Guesser</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Guess the country</h1>
+      <div class="img-container"></div>
+      <div class="search-box">
+        <input
+          class="answer-input"
+          type="text"
+          placeholder="Type the country here"
+        />
+        <button class="answer-btn">Answer</button>
+      </div>
+      <h3>Lives</h3>
+      <div class="life-container">
+        <i class="fa-solid fa-heart life-1 lives"></i>
+        <i class="fa-solid fa-heart life-2 lives"></i>
+        <i class="fa-solid fa-heart life-3 lives"></i>
+      </div>
+      <div class="error-container"></div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-container">
+        <span class="modal-close">&times</span>
+        <div class="modal-text">
+          Congratulations! You have answered -blank- answers correctly. Good
+          Job!
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
